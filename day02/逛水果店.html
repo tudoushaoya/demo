@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <p>欢迎光临vue开发的收银系统_水果店</p>
+        <ul>
+            <li>
+                <p>苹果10￥/斤，折扣<8折>
+                </p>
+            </li>
+            <li>
+                请输入你要购买的斤数： <input type="text" v-model.lazy="num">
+            </li>
+            <li>
+                <button @cilck="pay">结账买单</button>
+            </li>
+            <li>
+                结账单：总价{{num*10}}￥，折扣价{{num*10*0.8}}￥
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '.app',
+            data: {
+                num: 0,
+            },
+            methods: {
+                pay() {
+                    alert('你已经成功购买了' + this.num + '斤苹果，总价' + this.num * 10 + '￥，折扣价' + this.num * 10 * 0.8 + '￥')
+                }
+            },
+            computed: {},
+        })
+    </script>
+</body>
+
+</html>
