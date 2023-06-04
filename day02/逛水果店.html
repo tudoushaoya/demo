@@ -20,10 +20,10 @@
                 请输入你要购买的斤数： <input type="text" v-model.lazy="num">
             </li>
             <li>
-                <utton @cilck="pay">结账买单</utton>
+                <button @cilck="pay">结账买单</button>
             </li>
             <li>
-                结账单：总价{{num*10}}￥，折扣价{{num*10*0.8}}￥
+                结账单：总价{{num*10}}￥，折扣价{{num*10*0.8}}￥，省了{{num*10*0.2}}￥
             </li>
         </ul>
     </div>
