@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <button @click="selectAll">全选</button>
+        <button @click="invertSelection">反选</button>
+
+        <div>
+            <input type="checkbox" v-model="selectAllChecked">
+            <label>全选/取消全选</label>
+        </div>
+
+        <div v-for="(item, index) in items" :key="index">
+            <input type="checkbox" v-model="selectedItems" :value="item">
+            <label>{{ item }}</label>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '.app',
+            data() {
+                return {
+                    items: ['猪八戒', '唐僧', '孙悟空', '沙和尚', '白龙马', '牛魔王', '红孩儿', '二郎神'],
+                    selectedItems: []
+                };
+            },
+            computed: {
+                selectAllChecked: {
+                    get() {
+                        return this.selectedItems.length === this.items.length;
+                    },
+                    set(value) {
+                        if (value) {
+                            this.selectedItems = [...this.items];
+                        } else {
+                            this.selectedItems = [];
+                        }
+                    }
+                }
+            },
+            methods: {
+                selectAll() {
+                    this.selectedItems = [...this.items];
+                },
+                invertSelection() {
+                    this.selectedItems = this.items.filter(item => !this.selectedItems.includes(item));
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
