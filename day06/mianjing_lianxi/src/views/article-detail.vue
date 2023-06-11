@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data () {
     return {
@@ -25,7 +24,7 @@ export default {
   },
   methods: {
     async getList () {
-      const res = await axios.get(`https://mock.boxuegu.com/mock/3083/articles/${this.$route.params.id}`)
+      const res = await this.$axios.get(`https://mock.boxuegu.com/mock/3083/articles/${this.$route.params.id}`)
       this.list = res.data.result
     }
   },

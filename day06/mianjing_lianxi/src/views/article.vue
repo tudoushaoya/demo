@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: 'ArticlePage',
@@ -29,7 +28,7 @@ export default {
   },
   methods: {
     async getList () {
-      const res = await axios.get('https://mock.boxuegu.com/mock/3083/articles')
+      const res = await this.$axios.get('https://mock.boxuegu.com/mock/3083/articles')
       console.log(res)
       this.list = res.data.result.rows
     },
