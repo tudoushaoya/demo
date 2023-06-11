@@ -15,6 +15,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: 'article',
     component: LayoutPage,
     children: [
       { path: 'article', component: ArticlePage },
