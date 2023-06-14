@@ -18,14 +18,10 @@ const routes = [
     path: '/',
     redirect: '/signin'
   },
-  // {
-  //   path: '/indexhome',
-  //   component: IndexHome
-  // },
-  // {
-  //   path: '/mymap',
-  //   component: MyMap
-  // },
+  {
+    path: '/city',
+    component: () => import('@/views/CitySelection.vue')
+  },
   {
     path: '/bott',
     component: () => import('@/views/BottomNav.vue')
