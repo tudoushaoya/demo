@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登录" left-arrow @click-left="this.$router.back()"/>
+    <van-nav-bar title="登录" left-arrow @click-left="this.$router.back()" class="top"/>
     <van-form @submit="onSubmit">
       <van-field
         v-model="username"

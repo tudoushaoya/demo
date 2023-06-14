@@ -54,8 +54,4 @@ export default {
   text-align: center;
   margin-top: 18px;
 }
-.top {
-  background-color: #21b97a;
-  color: white;
-}
 </style>

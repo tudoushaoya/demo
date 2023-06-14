@@ -6,3 +6,6 @@ export const signup = data => {
 export const signin = data => {
   return request.post('/user/login', data)
 }
+export const getSwiper = () => {
+  return request.get('/home/swiper')
+}
