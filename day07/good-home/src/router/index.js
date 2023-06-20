@@ -3,12 +3,17 @@ import VueRouter from 'vue-router'
 import SignUp from '@/views/SignUp.vue'
 import SignIn from '@/views/SignIn.vue'
 import BottomNav from '@/views/BottomNav.vue'
+import MyMap from '@/views/MyMap.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/signup',
     component: SignUp
+  },
+  {
+    path: '/map',
+    component: MyMap
   },
   {
     path: '/signin',

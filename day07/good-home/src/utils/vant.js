@@ -1,6 +1,11 @@
 import Vue from 'vue'
-import { Form, Field, NavBar, Button, Tabbar, TabbarItem, Swipe, SwipeItem, Icon, Grid, GridItem, IndexBar, IndexAnchor, Cell } from 'vant'
+import { Form, Field, NavBar, Button, Tabbar, TabbarItem, Swipe, SwipeItem, Icon, Grid, GridItem, IndexBar, IndexAnchor, Cell, DropdownMenu, DropdownItem, Switch, Picker, Popup } from 'vant'
 
+Vue.use(Popup)
+Vue.use(Picker)
+Vue.use(DropdownMenu)
+Vue.use(Switch)
+Vue.use(DropdownItem)
 Vue.use(IndexBar)
 Vue.use(IndexAnchor)
 Vue.use(Grid)

@@ -42,7 +42,7 @@ export default {
     async onSubmit (values) {
       const res = await signin(values)
       this.$toast.success('登录成功')
-      this.$router.push('/indexhome')
+      this.$router.push('/my')
       console.log(res)
     }
   }
